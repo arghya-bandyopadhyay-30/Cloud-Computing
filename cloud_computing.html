@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Journey to the Cloud</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Simple animation for elements on scroll */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-300">
+
+    <!-- Header Section -->
+    <header class="bg-gray-800/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-700">
+        <div class="container mx-auto px-6 py-4">
+            <h1 class="text-2xl md:text-3xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-300">The Journey to the Cloud</h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        
+        <!-- Section 1: Before the Cloud -->
+        <section id="before-cloud" class="fade-in-section mb-20">
+            <h2 class="text-3xl font-bold text-center mb-2 text-white">Life Before the Cloud</h2>
+            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">Hosting a website or application was a complex and expensive undertaking. Here's what it involved:</p>
+            
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <!-- Step 1: Buy Servers -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 border border-gray-700">
+                    <div class="flex justify-center mb-4">
+                        <svg class="w-16 h-16 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">1. Buy a Stack of Servers</h3>
+                    <p class="text-gray-400">You had to physically purchase, house, and power your own hardware.</p>
+                </div>
+                <!-- Step 2: Scale Manually -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 border border-gray-700">
+                     <div class="flex justify-center mb-4">
+                        <svg class="w-16 h-16 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">2. High Traffic? More Servers!</h3>
+                    <p class="text-gray-400">Anticipating traffic spikes meant buying even more servers in advance.</p>
+                </div>
+                <!-- Step 3: Maintain Everything -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-300 border border-gray-700">
+                    <div class="flex justify-center mb-4">
+                        <svg class="w-16 h-16 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-white">3. Monitor and Maintain</h3>
+                    <p class="text-gray-400">You were responsible for all troubleshooting, security, and updates.</p>
+                </div>
+            </div>
+
+            <!-- Disadvantages -->
+            <div class="mt-12 bg-red-900/50 border-l-4 border-red-500 text-red-300 p-6 rounded-lg">
+                <h4 class="text-2xl font-bold mb-4 text-red-200">The Major Disadvantages</h4>
+                <ul class="list-disc list-inside space-y-2">
+                    <li><strong class="font-semibold text-red-200">Expensive:</strong> High upfront costs for hardware that was idle most of the time.</li>
+                    <li><strong class="font-semibold text-red-200">Tedious:</strong> Troubleshooting problems took time away from your actual business.</li>
+                    <li><strong class="font-semibold text-red-200">Inefficient:</strong> You paid for peak capacity 24/7, even when traffic was low.</li>
+                    <li><strong class="font-semibold text-red-200">Data Overload:</strong> The growing volume and variety of data became impossible to manage.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section 2: Why Cloud? -->
+        <section id="why-cloud" class="fade-in-section mb-20">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">The Turning Point: Why the Cloud?</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+                <!-- Problems -->
+                <div class="space-y-4 text-center md:text-right">
+                    <div class="p-4 bg-gray-800 rounded-lg shadow-md border border-gray-700">A lot of data is being generated.</div>
+                    <div class="p-4 bg-gray-800 rounded-lg shadow-md border border-gray-700">Where do I store it all?</div>
+                    <div class="p-4 bg-gray-800 rounded-lg shadow-md border border-gray-700">Running out of hard drive space!</div>
+                    <div class="p-4 bg-gray-800 rounded-lg shadow-md border border-gray-700">Data is in different forms: MP3, MP4, JPG...</div>
+                </div>
+
+                <!-- Arrow -->
+                <div class="text-blue-500 hidden md:block">
+                     <svg class="w-24 h-24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </div>
+                 <div class="text-blue-500 md:hidden">
+                     <svg class="w-24 h-24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 17l-4 4m0 0l-4-4m4 4V3"></path></svg>
+                </div>
+
+                <!-- Solution -->
+                <div class="bg-gradient-to-br from-blue-500 to-teal-400 p-8 rounded-full shadow-2xl text-white text-center flex flex-col items-center justify-center w-64 h-64">
+                    <svg class="w-20 h-20 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
+                    <h3 class="text-2xl font-bold">The Cloud</h3>
+                    <p class="mt-2">The simple, scalable solution.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: What is the Cloud? -->
+        <section id="what-is-cloud" class="fade-in-section mb-20 text-center">
+            <h2 class="text-3xl font-bold mb-4 text-white">So, What Exactly IS the Cloud?</h2>
+            <p class="text-gray-400 mb-8 max-w-3xl mx-auto">It's not just "someone else's computer." It's a fundamental shift in how we access and use computing resources.</p>
+            <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700">
+                <p class="text-xl mb-4 text-gray-200">Think of it as a global network of massive data centers, all connected.</p>
+                <div class="text-2xl font-bold my-6 text-blue-400">The Real Innovation: Orchestration</div>
+                <p class="text-gray-400 max-w-2xl mx-auto">Cloud providers grouped these resources (servers, storage, databases) and gave you the control to use them on-demand, over the internet. Instead of buying, you now <strong class="text-teal-400">rent</strong> exactly what you need, for exactly as long as you need it.</p>
+                
+                <div class="mt-8 border-t border-gray-700 pt-8">
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-2xl mx-auto bg-green-900/30 p-4 rounded-lg border border-green-700">
+                        <svg class="w-12 h-12 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        <div class="text-left">
+                            <h4 class="text-lg font-semibold text-white">Focus On Your Business</h4>
+                            <p class="text-gray-400">Providers handle all the other issues—security, infrastructure, and maintenance—freeing you to concentrate solely on your business goals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: What is Cloud Computing? -->
+        <section id="cloud-computing" class="fade-in-section mb-20">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">What is Cloud Computing?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Store -->
+                <div class="text-center p-6 border-2 border-blue-700 rounded-xl bg-blue-900/30">
+                    <div class="flex justify-center mb-4">
+                        <svg class="w-16 h-16 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h4a2 2 0 002-2V7a2 2 0 00-2-2h-4a2 2 0 00-2 2z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-4.586a1 1 0 01-.707-.293l-1.414-1.414A1 1 0 009.586 3H8a2 2 0 00-2 2v1z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2 text-white">Store</h3>
+                    <p class="text-gray-400">Storing your data and applications on remote servers instead of your local machine.</p>
+                </div>
+                <!-- Process -->
+                 <div class="text-center p-6 border-2 border-teal-700 rounded-xl bg-teal-900/30">
+                    <div class="flex justify-center mb-4">
+                        <svg class="w-16 h-16 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2 text-white">Process</h3>
+                    <p class="text-gray-400">Running computations and processing data using the powerful remote servers.</p>
+                </div>
+                <!-- Access -->
+                 <div class="text-center p-6 border-2 border-indigo-700 rounded-xl bg-indigo-900/30">
+                    <div class="flex justify-center mb-4">
+                        <svg class="w-16 h-16 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9V3m0 18a9 9 0 009-9m-9 9a9 9 0 00-9-9"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-2 text-white">Access</h3>
+                    <p class="text-gray-400">Accessing your data and applications from anywhere in the world via the internet.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Types of Cloud Services -->
+        <section id="cloud-types" class="fade-in-section mb-20">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">The Three Types of Cloud Services</h2>
+            <div class="grid lg:grid-cols-3 gap-8 mb-12">
+                <!-- IaaS Card -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400 mb-4">Infrastructure as a Service (IaaS)</h3>
+                        <p class="text-center text-gray-400 mb-4">You rent raw infrastructure (servers, storage, networking) and manage the OS, runtime, etc.</p>
+                        <div class="text-center p-4 bg-gray-900/50 rounded-lg mb-6">
+                            <p class="font-semibold text-white">Analogy:</p>
+                            <p class="text-gray-400">Buying land and building your own house.</p>
+                        </div>
+                        <div class="flex justify-center mb-6">
+                            <!-- IaaS Stack -->
+                            <div class="w-48 text-center text-xs font-semibold text-white">
+                                <div class="text-sm text-gray-400 mb-1">You Manage</div>
+                                <div class="p-1.5 bg-indigo-800 rounded-t-md">Data</div>
+                                <div class="p-1.5 bg-indigo-800">Applications</div>
+                                <div class="p-1.5 bg-indigo-800">Runtime</div>
+                                <div class="p-1.5 bg-indigo-800">Middleware</div>
+                                <div class="p-1.5 bg-indigo-800 rounded-b-md">O/S</div>
+                                
+                                <div class="text-sm text-gray-400 mb-1 mt-3">Vendor Manages</div>
+                                <div class="p-1.5 bg-teal-800 rounded-t-md">Virtualization</div>
+                                <div class="p-1.5 bg-teal-800">Servers</div>
+                                <div class="p-1.5 bg-teal-800">Storage</div>
+                                <div class="p-1.5 bg-teal-800 rounded-b-md">Networking</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-auto bg-gray-900/50 p-3 rounded-lg">
+                        <p class="text-sm font-semibold text-gray-300 text-center">Examples: <span class="font-normal text-teal-300">Google Compute Engine, AWS EC2</span></p>
+                    </div>
+                </div>
+                <!-- PaaS Card -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-4">Platform as a Service (PaaS)</h3>
+                        <p class="text-center text-gray-400 mb-4">You rent a complete platform (runtime + environment) to build and run your applications.</p>
+                        <div class="text-center p-4 bg-gray-900/50 rounded-lg mb-6">
+                            <p class="font-semibold text-white">Analogy:</p>
+                            <p class="text-gray-400">Renting an apartment; you just furnish & live.</p>
+                        </div>
+                        <div class="flex justify-center mb-6">
+                            <!-- PaaS Stack -->
+                           <div class="w-48 text-center text-xs font-semibold text-white">
+                                <div class="text-sm text-gray-400 mb-1">You Manage</div>
+                                <div class="p-1.5 bg-indigo-800 rounded-t-md">Data</div>
+                                <div class="p-1.5 bg-indigo-800 rounded-b-md">Applications</div>
+                                
+                                <div class="text-sm text-gray-400 mb-1 mt-3">Vendor Manages</div>
+                                <div class="p-1.5 bg-teal-800 rounded-t-md">Runtime</div>
+                                <div class="p-1.5 bg-teal-800">Middleware</div>
+                                <div class="p-1.5 bg-teal-800">O/S</div>
+                                <div class="p-1.5 bg-teal-800">Virtualization</div>
+                                <div class="p-1.5 bg-teal-800">Servers</div>
+                                <div class="p-1.5 bg-teal-800">Storage</div>
+                                <div class="p-1.5 bg-teal-800 rounded-b-md">Networking</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-auto bg-gray-900/50 p-3 rounded-lg">
+                        <p class="text-sm font-semibold text-gray-300 text-center">Examples: <span class="font-normal text-teal-300">Google App Engine, Heroku</span></p>
+                    </div>
+                </div>
+                <!-- SaaS Card -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-blue-400 mb-4">Software as a Service (SaaS)</h3>
+                        <p class="text-center text-gray-400 mb-4">You consume a ready-made application leased by the provider. No maintenance needed.</p>
+                        <div class="text-center p-4 bg-gray-900/50 rounded-lg mb-6">
+                            <p class="font-semibold text-white">Analogy:</p>
+                            <p class="text-gray-400">Staying in a hotel where everything is ready.</p>
+                        </div>
+                        <div class="flex justify-center mb-6">
+                            <!-- SaaS Stack -->
+                            <div class="w-48 text-center text-xs font-semibold text-white">
+                                <div class="text-sm text-gray-400 mb-1">You Manage</div>
+                                <div class="p-1.5 bg-indigo-800 rounded-md">Data</div>
+
+                                <div class="text-sm text-gray-400 mb-1 mt-3">Vendor Manages</div>
+                                <div class="p-1.5 bg-teal-800 rounded-t-md">Applications</div>
+                                <div class="p-1.5 bg-teal-800">Runtime</div>
+                                <div class="p-1.5 bg-teal-800">Middleware</div>
+                                <div class="p-1.5 bg-teal-800">O/S</div>
+                                <div class="p-1.5 bg-teal-800">Virtualization</div>
+                                <div class="p-1.5 bg-teal-800">Servers</div>
+                                <div class="p-1.5 bg-teal-800">Storage</div>
+                                <div class="p-1.5 bg-teal-800 rounded-b-md">Networking</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-auto bg-gray-900/50 p-3 rounded-lg">
+                        <p class="text-sm font-semibold text-gray-300 text-center">Examples: <span class="font-normal text-teal-300">Gmail, Dropbox, Salesforce</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Deployment Models -->
+        <section id="deployment-models" class="fade-in-section mb-20">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">Cloud Deployment Models</h2>
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Public Cloud -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 flex flex-col">
+                    <h3 class="text-2xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-4">Public Cloud</h3>
+                    <p class="text-center text-gray-400 mb-4">Services are provided to everyone over the internet.</p>
+                    <div class="text-center p-4 bg-gray-900/50 rounded-lg mb-6">
+                        <p class="font-semibold text-white">Analogy:</p>
+                        <p class="text-gray-400">Renting a flat in a big apartment complex.</p>
+                    </div>
+                    <div class="flex-grow mb-4">
+                        <h4 class="font-semibold text-white mb-2">Features:</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-400">
+                            <li>Open to the general public.</li>
+                            <li>Cheap and easy setup.</li>
+                            <li>Pay only for what you use.</li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto bg-gray-900/50 p-3 rounded-lg">
+                        <p class="text-sm font-semibold text-gray-300 text-center">Examples: <span class="font-normal text-teal-300">Google Cloud, AWS, Microsoft Azure</span></p>
+                    </div>
+                </div>
+
+                <!-- Private Cloud -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 flex flex-col">
+                    <h3 class="text-2xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-lime-400 to-green-500 mb-4">Private Cloud</h3>
+                    <p class="text-center text-gray-400 mb-4">Services are offered only to selected organizations.</p>
+                    <div class="text-center p-4 bg-gray-900/50 rounded-lg mb-6">
+                        <p class="font-semibold text-white">Analogy:</p>
+                        <p class="text-gray-400">Owning your own private villa.</p>
+                    </div>
+                    <div class="flex-grow mb-4">
+                        <h4 class="font-semibold text-white mb-2">Features:</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-400">
+                            <li>Restricted, private access.</li>
+                            <li>Higher security and control.</li>
+                            <li>Data stays within the organization.</li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto bg-gray-900/50 p-3 rounded-lg">
+                        <p class="text-sm font-semibold text-gray-300 text-center">Examples: <span class="font-normal text-teal-300">VMware Cloud, OpenStack</span></p>
+                    </div>
+                </div>
+
+                <!-- Hybrid Cloud -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 flex flex-col">
+                    <h3 class="text-2xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500 mb-4">Hybrid Cloud</h3>
+                    <p class="text-center text-gray-400 mb-4">A mix of public and private clouds working together.</p>
+                    <div class="text-center p-4 bg-gray-900/50 rounded-lg mb-6">
+                        <p class="font-semibold text-white">Analogy:</p>
+                        <p class="text-gray-400">Owning a villa but renting hotel rooms for guests.</p>
+                    </div>
+                    <div class="flex-grow mb-4">
+                        <h4 class="font-semibold text-white mb-2">Features:</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-400">
+                            <li>Combines flexibility and security.</li>
+                            <li>Keep sensitive data private.</li>
+                            <li>Use public cloud for scalability.</li>
+                        </ul>
+                    </div>
+                    <div class="mt-auto bg-gray-900/50 p-3 rounded-lg">
+                        <p class="text-sm font-semibold text-gray-300 text-center">Example: <span class="font-normal text-teal-300">Payroll on private, website on public.</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 7: On-Premise vs Cloud -->
+        <section id="on-prem-vs-cloud" class="fade-in-section mb-20">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">On-Premise vs. Cloud Computing</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- On-Premise Column -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
+                    <h3 class="text-2xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-red-500 mb-4">On-Premise Architecture</h3>
+                    <p class="text-center text-gray-400 mb-6">The traditional approach where all data and applications are hosted in-house.</p>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-white text-lg">Cost:</h4>
+                            <ul class="list-disc list-inside space-y-1 text-gray-400 pl-4">
+                                <li>Heavy up-front cost for hardware.</li>
+                                <li>High maintenance and staff costs.</li>
+                                <li>A costly affair with complex planning.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-white text-lg">Security:</h4>
+                            <ul class="list-disc list-inside space-y-1 text-gray-400 pl-4">
+                                <li>Owner manages all security.</li>
+                                <li>Quality depends on the owner's experience.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-white text-lg">Control:</h4>
+                            <ul class="list-disc list-inside space-y-1 text-gray-400 pl-4">
+                                <li>More control over implementation.</li>
+                                <li>Longer time to set up and scale.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cloud Computing Column -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
+                    <h3 class="text-2xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-400 mb-4">Cloud Computing Approach</h3>
+                    <p class="text-center text-gray-400 mb-6">Like an electricity provider, a third party manages the infrastructure and you just pay for what you use.</p>
+
+                     <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-white text-lg">Cost:</h4>
+                            <ul class="list-disc list-inside space-y-1 text-gray-400 pl-4">
+                                <li>Cheaper up-front cost.</li>
+                                <li>Predictable costs over time.</li>
+                                <li><strong class="text-teal-300">Pay-as-you-go model.</strong></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-white text-lg">Security:</h4>
+                            <ul class="list-disc list-inside space-y-1 text-gray-400 pl-4">
+                                <li>Dependent on the vendor's expertise.</li>
+                                <li>Owners give up some direct control.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-white text-lg">Control & Speed:</h4>
+                            <ul class="list-disc list-inside space-y-1 text-gray-400 pl-4">
+                                <li>Easy to implement and configure.</li>
+                                <li>Much less time to set up and deploy.</li>
+                            </ul>
+                        </div>
+                         <div>
+                            <h4 class="font-semibold text-white text-lg">Drawbacks:</h4>
+                            <ul class="list-disc list-inside space-y-1 text-gray-400 pl-4">
+                                <li>Potential difficulty getting data back.</li>
+                                <li>Risk of outages and deployment issues.</li>
+                                <li>Subject to country regulations.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Cloud Providers -->
+        <section id="cloud-providers" class="fade-in-section mb-20">
+            <h2 class="text-3xl font-bold text-center mb-4 text-white">Popular Cloud Providers</h2>
+            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">Think of them like different electricity companies — all provide power, but each has its own strengths and pricing.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- AWS -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
+                    <h3 class="text-xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 mb-4">AWS (Amazon Web Services)</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400">
+                        <li><strong class="text-teal-300">Market leader and most popular.</strong></li>
+                        <li>Huge variety of services (supermarket of tools).</li>
+                        <li><strong class="text-teal-300">Provides 6x more compute capacity than rivals.</strong></li>
+                    </ul>
+                </div>
+                <!-- GCP -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
+                    <h3 class="text-xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-yellow-500 mb-4">GCP (Google Cloud Platform)</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400">
+                        <li><strong class="text-teal-300">Pioneer for Big Data & analytics.</strong></li>
+                        <li><strong class="text-teal-300">Strong in AI, ML, and data processing.</strong></li>
+                        <li>Often considered the cheapest option.</li>
+                    </ul>
+                </div>
+                <!-- Azure -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
+                    <h3 class="text-xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-400 mb-4">MS Azure (Microsoft Azure)</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400">
+                        <li>Strong with enterprise clients.</li>
+                        <li>Best for companies using Microsoft products.</li>
+                        <li>Good on-premises system integration.</li>
+                    </ul>
+                </div>
+                <!-- Digital Ocean -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
+                    <h3 class="text-xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-300 mb-4">Digital Ocean</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400">
+                        <li>Known for being developer-friendly.</li>
+                        <li>Simple, easy-to-use interface.</li>
+                        <li>Popular for startups & small projects.</li>
+                    </ul>
+                </div>
+                <!-- IBM Cloud -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
+                    <h3 class="text-xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-blue-400 mb-4">IBM Cloud</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400">
+                        <li>Strong in AI and enterprise computing.</li>
+                        <li>Trusted by large corporations (banks, etc).</li>
+                        <li>Good for legacy system integration.</li>
+                    </ul>
+                </div>
+                <!-- Terremark -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
+                    <h3 class="text-xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-slate-400 to-gray-300 mb-4">Terremark</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400">
+                        <li>An early player in the cloud space.</li>
+                        <li>Acquired by Verizon.</li>
+                        <li>Less common compared to the big three today.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW SECTION: Cloud Engineer Roles -->
+        <section id="cloud-engineers" class="fade-in-section">
+            <h2 class="text-3xl font-bold text-center mb-4 text-white">Who is a Cloud Engineer?</h2>
+            <p class="text-center text-gray-400 mb-6 max-w-3xl mx-auto">An IT professional responsible for the design, maintenance, monitoring, and deployment of cloud computing infrastructure.</p>
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Cloud Architect -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
+                    <h3 class="text-xl font-bold text-center mb-4 text-white">Cloud Architect</h3>
+                    <p class="text-sm text-gray-400 mb-4">Creates the blueprints for application designs, requiring advanced technical skills in distributed systems.</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400 text-sm">
+                        <li>Designs scalable, reliable applications.</li>
+                        <li>Deploys enterprise-wide operations.</li>
+                        <li>Implements cost-control strategies.</li>
+                    </ul>
+                </div>
+                <!-- Cloud Developer -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
+                    <h3 class="text-xl font-bold text-center mb-4 text-white">Cloud Developer</h3>
+                    <p class="text-sm text-gray-400 mb-4">Develops, deploys, and debugs cloud-based applications using core cloud services and architecture best practices.</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400 text-sm">
+                        <li>Expert in at least one programming language.</li>
+                        <li>Uses APIs, CLIs, and SDKs for applications.</li>
+                        <li>Implements CI/CD pipelines for deployment.</li>
+                        <li>Writes code for serverless applications.</li>
+                        <li>Understands containerization in development.</li>
+                    </ul>
+                </div>
+                <!-- SysOps Administrator -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
+                    <h3 class="text-xl font-bold text-center mb-4 text-white">SysOps Administrator</h3>
+                    <p class="text-sm text-gray-400 mb-4">Configures, monitors, and manages cloud services, ensuring data flow and security requirements are met.</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400 text-sm">
+                        <li>Experience in a systems operations role.</li>
+                        <li>Knowledge of virtualization and networking.</li>
+                        <li>Monitors and audits systems for performance.</li>
+                        <li>Controls data flow to and from the cloud.</li>
+                        <li>Migrates on-premises workloads to the cloud.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 text-center p-6 mt-12 border-t border-gray-700">
+        <p>&copy; 2025 The Cloud Journey. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for fade-in animation on scroll
+        const sections = document.querySelectorAll('.fade-in-section');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+</body>
+</html>

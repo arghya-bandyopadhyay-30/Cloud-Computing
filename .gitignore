@@ -1,0 +1,29 @@
+# OS / Editor files
+.DS_Store
+Thumbs.db
+*.log
+
+# Node.js dependencies (if you use npm/yarn for tooling)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build / Dist folders
+dist/
+build/
+out/
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
+
+# Environment / Config
+.env
+.env.local
+
+# IDE / Editor settings
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
