@@ -468,7 +468,7 @@
             </div>
         </section>
 
-        <!-- NEW SECTION: Service Comparison -->
+        <!-- Section 9: Service Comparison -->
         <section id="service-comparison" class="fade-in-section mb-20">
             <h2 class="text-3xl font-bold text-center mb-12 text-white">Comparing Core Services</h2>
             <div class="grid md:grid-cols-3 gap-8">
@@ -589,8 +589,8 @@
             </div>
         </section>
 
-        <!-- Section 9: Cloud Engineer Roles -->
-        <section id="cloud-engineers" class="fade-in-section">
+        <!-- Section 10: Cloud Engineer Roles -->
+        <section id="cloud-engineers" class="fade-in-section mb-20">
             <h2 class="text-3xl font-bold text-center mb-4 text-white">Who is a Cloud Engineer?</h2>
             <p class="text-center text-gray-400 mb-6 max-w-3xl mx-auto">An IT professional responsible for the design, maintenance, monitoring, and deployment of cloud computing infrastructure.</p>
             <div class="grid lg:grid-cols-3 gap-8">
@@ -630,6 +630,66 @@
                 </div>
             </div>
         </section>
+        
+        <!-- NEW SECTION: Global Infrastructure -->
+        <section id="global-infrastructure" class="fade-in-section">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">Global Infrastructure: Regions, Zones, & Data Centers</h2>
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Region -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 flex flex-col">
+                    <h3 class="text-2xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-500 mb-4">Region</h3>
+                    <p class="text-center text-gray-400 mb-4">A broad geographical area, like a country, where a provider has infrastructure.</p>
+                    <div class="text-center p-4 bg-gray-900/50 rounded-lg mb-6">
+                        <p class="font-semibold text-white">Analogy:</p>
+                        <p class="text-gray-400">A City (e.g., Mumbai)</p>
+                    </div>
+                    <div class="flex-grow mb-4">
+                        <h4 class="font-semibold text-white mb-2">Why it matters:</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-400">
+                            <li>Keep data close to users for low latency.</li>
+                            <li>Meet legal and compliance requirements.</li>
+                            <li>Isolated for disaster recovery.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Zone -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 flex flex-col">
+                    <h3 class="text-2xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-amber-500 mb-4">Zone</h3>
+                    <p class="text-center text-gray-400 mb-4">An independent cluster of data centers inside a Region.</p>
+                    <div class="text-center p-4 bg-gray-900/50 rounded-lg mb-6">
+                        <p class="font-semibold text-white">Analogy:</p>
+                        <p class="text-gray-400">A Neighborhood (e.g., Andheri)</p>
+                    </div>
+                    <div class="flex-grow mb-4">
+                        <h4 class="font-semibold text-white mb-2">Why it matters:</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-400">
+                            <li>Provides redundancy within a region.</li>
+                            <li>High-speed links between zones.</li>
+                            <li>Services can failover if one zone fails.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Data Center -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 flex flex-col">
+                    <h3 class="text-2xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-rose-500 mb-4">Data Center</h3>
+                    <p class="text-center text-gray-400 mb-4">A physical building with servers, networking, and cooling.</p>
+                    <div class="text-center p-4 bg-gray-900/50 rounded-lg mb-6">
+                        <p class="font-semibold text-white">Analogy:</p>
+                        <p class="text-gray-400">An Apartment Building</p>
+                    </div>
+                    <div class="flex-grow mb-4">
+                        <h4 class="font-semibold text-white mb-2">Why it matters:</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-400">
+                            <li>The physical foundation of the cloud.</li>
+                            <li>You don't choose them directly.</li>
+                            <li>Managed entirely by the cloud provider.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
 
@@ -656,5 +716,6 @@
             observer.observe(section);
         });
     </script>
+
 </body>
 </html>
