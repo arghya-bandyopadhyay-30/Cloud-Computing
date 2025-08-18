@@ -28,8 +28,14 @@
 
     <!-- Header Section -->
     <header class="bg-gray-800/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-700">
-        <div class="container mx-auto px-6 py-4">
-            <h1 class="text-2xl md:text-3xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-300">The Journey to the Cloud</h1>
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="text-gray-400 hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </a>
+            <h1 class="text-xl md:text-3xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-300">The Journey to the Cloud</h1>
+            <div class="w-6"></div> <!-- Spacer to keep title centered -->
         </div>
     </header>
 
@@ -631,24 +637,24 @@
             </div>
         </section>
         
-        <!-- NEW SECTION: Global Infrastructure -->
-        <section id="global-infrastructure" class="fade-in-section">
-            <h2 class="text-3xl font-bold text-center mb-12 text-white">Global Infrastructure: Regions, Zones, & Data Centers</h2>
-            <div class="grid lg:grid-cols-3 gap-8">
+        <!-- Section 11: Global Infrastructure -->
+        <section id="global-infrastructure" class="fade-in-section mb-20">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">Global Infrastructure</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Region -->
                 <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 flex flex-col">
                     <h3 class="text-2xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-500 mb-4">Region</h3>
-                    <p class="text-center text-gray-400 mb-4">A broad geographical area, like a country, where a provider has infrastructure.</p>
+                    <p class="text-center text-gray-400 mb-4">A broad geographical area, like a country.</p>
                     <div class="text-center p-4 bg-gray-900/50 rounded-lg mb-6">
                         <p class="font-semibold text-white">Analogy:</p>
                         <p class="text-gray-400">A City (e.g., Mumbai)</p>
                     </div>
                     <div class="flex-grow mb-4">
                         <h4 class="font-semibold text-white mb-2">Why it matters:</h4>
-                        <ul class="list-disc list-inside space-y-2 text-gray-400">
-                            <li>Keep data close to users for low latency.</li>
-                            <li>Meet legal and compliance requirements.</li>
-                            <li>Isolated for disaster recovery.</li>
+                        <ul class="list-disc list-inside space-y-2 text-gray-400 text-sm">
+                            <li>Keep data close to users.</li>
+                            <li>Meet legal requirements.</li>
+                            <li>Disaster recovery.</li>
                         </ul>
                     </div>
                 </div>
@@ -663,10 +669,10 @@
                     </div>
                     <div class="flex-grow mb-4">
                         <h4 class="font-semibold text-white mb-2">Why it matters:</h4>
-                        <ul class="list-disc list-inside space-y-2 text-gray-400">
-                            <li>Provides redundancy within a region.</li>
-                            <li>High-speed links between zones.</li>
-                            <li>Services can failover if one zone fails.</li>
+                        <ul class="list-disc list-inside space-y-2 text-gray-400 text-sm">
+                            <li>Provides redundancy.</li>
+                            <li>High-speed connections.</li>
+                            <li>Enables service failover.</li>
                         </ul>
                     </div>
                 </div>
@@ -681,12 +687,71 @@
                     </div>
                     <div class="flex-grow mb-4">
                         <h4 class="font-semibold text-white mb-2">Why it matters:</h4>
-                        <ul class="list-disc list-inside space-y-2 text-gray-400">
-                            <li>The physical foundation of the cloud.</li>
-                            <li>You don't choose them directly.</li>
-                            <li>Managed entirely by the cloud provider.</li>
+                        <ul class="list-disc list-inside space-y-2 text-gray-400 text-sm">
+                            <li>The physical foundation.</li>
+                            <li>You don't choose them.</li>
+                            <li>Managed by the provider.</li>
                         </ul>
                     </div>
+                </div>
+                
+                <!-- Edge Location -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 flex flex-col">
+                    <h3 class="text-2xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-violet-500 mb-4">Edge Location</h3>
+                    <p class="text-center text-gray-400 mb-4">A smaller data center for content delivery and caching.</p>
+                     <div class="text-center p-4 bg-gray-900/50 rounded-lg mb-6">
+                        <p class="font-semibold text-white">Analogy:</p>
+                        <p class="text-gray-400">A local courier pickup point.</p>
+                    </div>
+                    <div class="flex-grow mb-4">
+                        <h4 class="font-semibold text-white mb-2">Why it matters:</h4>
+                        <ul class="list-disc list-inside space-y-2 text-gray-400 text-sm">
+                            <li>Reduces latency for users.</li>
+                            <li>Improves speed and performance.</li>
+                            <li>Part of a CDN.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 12: How to Choose the Right Region -->
+        <section id="choose-region" class="fade-in-section">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">How to Choose the Right Region</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Pricing -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 flex flex-col">
+                    <h3 class="text-xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-lime-400 mb-4">Pricing</h3>
+                    <p class="text-gray-400 mb-4">Cloud services don’t cost the same in every Region.</p>
+                    <p class="text-gray-400 mb-4"><strong class="text-white">Example: </strong>Running an EC2 instance in Mumbai may be more expensive than in US-East (N. Virginia).</p>
+                    <p class="text-sm bg-gray-900/50 p-3 rounded-lg text-teal-300 mt-auto"><strong class="text-white">Tip:</strong> Always compare prices using the provider’s pricing calculator.</p>
+                </div>
+                <!-- Security & Compliance -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 flex flex-col">
+                    <h3 class="text-xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-rose-500 mb-4">Security & Compliance</h3>
+                    <p class="text-gray-400 mb-4">Some industries (finance, healthcare, government) require data to be stored within specific national boundaries.</p>
+                    <p class="text-gray-400 mb-4"><strong class="text-white">Example: </strong>An Indian bank must host customer data inside India → choose Mumbai Region.</p>
+                    <p class="text-sm bg-gray-900/50 p-3 rounded-lg text-teal-300 mt-auto"><strong class="text-white">Tip:</strong> Check data residency laws before finalizing your choice.</p>
+                </div>
+                <!-- User Location -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 flex flex-col">
+                    <h3 class="text-xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 mb-4">User/Customer Location</h3>
+                    <p class="text-gray-400 mb-4">Deploy where your customers are to reduce latency and improve performance.</p>
+                    <p class="text-gray-400 mb-4"><strong class="text-white">Example: </strong>If most users are in India → choose Mumbai.</p>
+                    <p class="text-sm bg-gray-900/50 p-3 rounded-lg text-teal-300 mt-auto"><strong class="text-white">Tip:</strong> Map your largest user base and pick the nearest region.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 flex flex-col h-full">
+                    <h3 class="text-xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-4">Service Availability</h3>
+                    <p class="text-gray-400 mb-4">Not all Regions offer all services.</p>
+                    <p class="text-gray-400 mb-4"><strong class="text-white">Example: </strong>New/advanced services (like AI/ML or GPUs) often launch first in US regions before coming to Asia or Europe.</p>
+                    <p class="text-sm bg-gray-900/50 p-3 rounded-lg text-teal-300 mt-auto"><strong class="text-white">Tip:</strong> Use the provider’s service availability map to check.</p>
+                </div>
+                <!-- Latency -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 flex flex-col h-full">
+                    <h3 class="text-xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-400 mb-4">Latency</h3>
+                    <p class="text-gray-400 mb-4">The farther the Region is from your users, the higher the latency (time taken for data to travel).</p>
+                    <p class="text-gray-400 mb-4"><strong class="text-white">Example: </strong>An app hosted in US-East (Virginia) but accessed from India will have 200+ ms latency vs <50 ms if hosted in Mumbai.</p>
+                    <p class="text-sm bg-gray-900/50 p-3 rounded-lg text-teal-300 mt-auto"><strong class="text-white">Tip:</strong> Run latency tests (e.g., CloudPing) to measure before finalizing.</p>
                 </div>
             </div>
         </section>
