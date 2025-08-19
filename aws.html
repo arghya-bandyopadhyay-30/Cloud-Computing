@@ -21,42 +21,55 @@
             opacity: 1;
             transform: translateY(0);
         }
+        /* Custom clip-path for chevron shape */
+        .chevron-clip-mobile {
+            clip-path: none; /* No clip path on mobile */
+        }
+        @media (min-width: 768px) {
+            .chevron-clip-mobile {
+                 clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-300">
 
+    <!-- Header Section -->
     <header class="bg-gray-800/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-700">
         <div class="container mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="index.html" class="text-gray-400 hover:text-white transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2.69l.346.666L19.5 15.5H4.5l7.154-12.144A.5.5 0 0 1 12 2.69zM12 17.5v3.5"/>
+                    <path d="M12 11.5l-3.5 6h7l-3.5-6z"/>
                 </svg>
             </a>
             <h1 class="text-xl md:text-3xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">Amazon Web Services (AWS)</h1>
-            <div class="w-6"></div> </div>
+            <div class="w-8"></div> <!-- Spacer -->
+        </div>
     </header>
 
     <main class="container mx-auto px-6 py-12">
 
+        <!-- What is AWS Section -->
         <section id="what-is-aws" class="fade-in-section mb-20 text-center">
             <h2 class="text-3xl font-bold mb-4 text-white">What is AWS?</h2>
-            <p class="text-gray-400 mb-8 max-w-3xl mx-auto">A bundled remote computing service that provides cloud computing infrastructure over the internet.</p>
+            <p class="text-gray-400 mb-12 max-w-3xl mx-auto">A bundled remote computing service that provides cloud computing infrastructure over the internet.</p>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center p-6 border-2 border-blue-700 rounded-xl bg-blue-900/30">
+                <div class="text-center p-6 border-2 border-blue-700 rounded-xl bg-blue-900/30 transform hover:scale-105 transition-transform duration-300">
                     <div class="flex justify-center mb-4">
-                        <svg class="w-16 h-16 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h4a2 2 0 002-2V7a2 2 0 00-2-2h-4a2 2 0 00-2 2z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-4.586a1 1 0 01-.707-.293l-1.414-1.414A1 1 0 009.586 3H8a2 2 0 00-2 2v1z"></path></svg>
+                        <svg class="w-16 h-16 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h4a2 2 0 002-2V7a2 2 0 00-2-2h-4a2 2 0 00-2 2z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-4.586a1 1 M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
                     </div>
                     <h3 class="text-2xl font-semibold mb-2 text-white">Storage</h3>
                     <p class="text-gray-400">Secure and scalable object storage.</p>
                 </div>
-                <div class="text-center p-6 border-2 border-teal-700 rounded-xl bg-teal-900/30">
+                <div class="text-center p-6 border-2 border-teal-700 rounded-xl bg-teal-900/30 transform hover:scale-105 transition-transform duration-300">
                     <div class="flex justify-center mb-4">
                         <svg class="w-16 h-16 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                     </div>
                     <h3 class="text-2xl font-semibold mb-2 text-white">Bandwidth</h3>
                     <p class="text-gray-400">High-performance content delivery network.</p>
                 </div>
-                <div class="text-center p-6 border-2 border-indigo-700 rounded-xl bg-indigo-900/30">
+                <div class="text-center p-6 border-2 border-indigo-700 rounded-xl bg-indigo-900/30 transform hover:scale-105 transition-transform duration-300">
                     <div class="flex justify-center mb-4">
                         <svg class="w-16 h-16 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
                     </div>
@@ -66,6 +79,7 @@
             </div>
         </section>
 
+        <!-- Who Uses AWS Section -->
         <section id="who-uses-aws" class="fade-in-section mb-20">
             <h2 class="text-3xl font-bold text-center mb-12 text-white">Trusted by Industry Leaders</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -84,7 +98,7 @@
             </div>
         </section>
 
-
+        <!-- Benefits of AWS Section -->
         <section id="benefits-of-aws" class="fade-in-section mb-20">
             <h2 class="text-3xl font-bold text-center mb-12 text-white">Benefits of AWS</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -123,46 +137,123 @@
             </div>
         </section>
 
+        <!-- Core AWS Services Section -->
+        <section id="core-services" class="fade-in-section mb-20">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">Core AWS Services</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Compute Card -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 text-center">
+                    <div class="flex justify-center mb-4">
+                        <svg class="w-16 h-16 text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Compute</h3>
+                    <p class="text-gray-400">Virtual servers, containers, and serverless computing.</p>
+                </div>
+                <!-- Storage Card -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 text-center">
+                    <div class="flex justify-center mb-4">
+                        <svg class="w-16 h-16 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 1.1.9 2 2 2h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Storage</h3>
+                    <p class="text-gray-400">Durable, scalable, and secure data storage options.</p>
+                </div>
+                <!-- Database Card -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 text-center">
+                    <div class="flex justify-center mb-4">
+                        <svg class="w-16 h-16 text-red-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 1.1.9 2 2 2h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2zm0 0L12 2l8 5"/></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Database</h3>
+                    <p class="text-gray-400">Managed relational, NoSQL, and in-memory databases.</p>
+                </div>
+                <!-- Networking Card -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 text-center">
+                    <div class="flex justify-center mb-4">
+                        <svg class="w-16 h-16 text-purple-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.862 13.164 9 12.898 9 12.622V11a3 3 0 00-3-3H3a1 1 0 00-1 1v2a1 1 0 001 1h3m10.684-2.658C20.862 10.836 21 11.102 21 11.378V13a3 3 0 01-3 3h-3a1 1 0 01-1-1v-2a1 1 0 011-1h3m-9.316 0h2.632"/></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Networking</h3>
+                    <p class="text-gray-400">Isolated cloud resources and content delivery.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- AWS Global Infrastructure Section -->
+        <section id="global-infrastructure" class="fade-in-section mb-20">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">AWS Global Infrastructure</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
+                    <h3 class="text-2xl font-semibold text-cyan-400 mb-3">Regions</h3>
+                    <p class="text-gray-400">Physical locations around the world where AWS clusters data centers.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
+                    <h3 class="text-2xl font-semibold text-lime-400 mb-3">Availability Zones</h3>
+                    <p class="text-gray-400">One or more discrete data centers with redundant power, networking, and connectivity within a Region.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shared Responsibility Model Section -->
         <section id="shared-responsibility" class="fade-in-section mb-20">
             <h2 class="text-3xl font-bold text-center mb-12 text-white">Shared Responsibility Model</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
-                    <h3 class="text-2xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-400 mb-4">The House Analogy</h3>
-                    <ul class="list-disc list-inside space-y-2 text-gray-400">
-                        <li>When we build a house, it is the duty of the mason to install doors and locks properly.</li>
-                        <li>Similarly, as an owner, it is my duty to use that lock for security.</li>
-                    </ul>
+
+            <div class="max-w-4xl mx-auto bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 mb-12">
+                <h3 class="text-2xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-400 mb-4">The House Analogy</h3>
+                <ul class="list-disc list-inside space-y-3 text-gray-400">
+                    <li>When you build a house, it's the duty of the mason to install doors and locks properly. This is like AWS being responsible for the security&nbsp;<strong class="text-amber-400">OF</strong>&nbsp;the cloud (Compute, storage, DB, network software, etc.).</li>
+                    <li>As the owner, it's your duty to use that lock for security. This is like the Customer being responsible for security&nbsp;<strong class="text-indigo-400">IN</strong>&nbsp;the cloud (customer data, client-side data encryption).</li>
+                </ul>
+            </div>
+
+            <div class="max-w-6xl mx-auto rounded-lg overflow-hidden shadow-2xl text-sm md:text-base">
+
+                <div class="flex flex-col md:flex-row">
+                    <div class="w-full md:w-1/4 bg-indigo-700 text-white font-bold p-4 flex items-center justify-center text-center chevron-clip-mobile">Customer<br>Responsibility</div>
+                    <div class="w-full md:w-2/4 bg-gray-800 text-gray-300">
+                        <div class="p-3 border-b border-gray-700 h-1/2 flex items-center">Customer data</div>
+                        <div class="p-3 h-1/2 flex items-center">Client-side data encryption</div>
+                    </div>
+                    <div class="w-full md:w-1/4 bg-gray-800 font-semibold p-4 flex items-center justify-center text-center border-l-4 border-indigo-700">Security&nbsp;<span class="font-bold text-indigo-400">IN</span>&nbsp;the cloud</div>
                 </div>
-                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700">
-                    <h3 class="text-2xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-red-500 mb-4">AWS vs. Customer</h3>
-                    <ul class="list-disc list-inside space-y-2 text-gray-400">
-                        <li><strong class="text-teal-300">AWS</strong> is responsible for the security <strong class="text-teal-300">OF</strong> the cloud (Compute, storage, DB, network software, etc.).</li>
-                        <li>The <strong class="text-yellow-300">Customer</strong> is responsible for security <strong class="text-yellow-300">IN</strong> the cloud (customer data, client-side data encryption).</li>
-                    </ul>
+
+                <div class="flex flex-col md:flex-row">
+                    <div class="w-full md:w-1/4 bg-teal-700 text-white font-bold p-4 flex items-center justify-center text-center chevron-clip-mobile">Customer or AWS<br>Responsibility</div>
+                    <div class="w-full md:w-2/4 bg-gray-800 text-gray-300">
+                        <div class="p-3 border-b border-gray-700">Server-side encryption</div>
+                        <div class="p-3 border-b border-gray-700">Network traffic protection</div>
+                        <div class="p-3 border-b border-gray-700">Platform and application management</div>
+                        <div class="p-3">OS, network, firewall configuration</div>
+                    </div>
+                    <div class="w-full md:w-1/4 bg-gray-800 font-semibold p-4 flex items-center justify-center text-center border-l-4 border-teal-700">Varies by service</div>
                 </div>
+
+                <div class="flex flex-col md:flex-row">
+                    <div class="w-full md:w-1/4 bg-amber-600 text-gray-900 font-bold p-4 flex items-center justify-center text-center chevron-clip-mobile">AWS<br>Responsibility</div>
+                    <div class="w-full md:w-2/4 bg-gray-800 text-gray-300">
+                        <div class="p-3 border-b border-gray-700 h-1/2 flex items-center">Software for compute, storage, database, and networking</div>
+                        <div class="p-3 h-1/2 flex items-center">Hardware, AWS Global Infrastructure</div>
+                    </div>
+                    <div class="w-full md:w-1/4 bg-gray-800 font-semibold p-4 flex items-center justify-center text-center border-l-4 border-amber-600">Security&nbsp;<span class="font-bold text-amber-400">OF</span>&nbsp;the cloud</div>
+                </div>
+
             </div>
         </section>
 
     </main>
 
-    <footer class="bg-gray-800 text-gray-400 text-center p-6 mt-12 border-t border-gray-700">
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-gray-400 text-center p-6 mt-20 border-t border-gray-700">
         <p>&copy; 2025 Cloud Computing Hub. All Rights Reserved.</p>
     </footer>
 
     <script>
         // JavaScript for fade-in animation on scroll
         const sections = document.querySelectorAll('.fade-in-section');
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('is-visible');
                 }
             });
-        }, {
-            threshold: 0.1
-        });
-
+        }, { threshold: 0.1 });
         sections.forEach(section => {
             observer.observe(section);
         });
