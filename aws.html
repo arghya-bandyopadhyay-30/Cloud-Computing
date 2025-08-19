@@ -30,21 +30,41 @@
                  clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
             }
         }
+        .service-category {
+            border: 2px solid;
+            padding: 1.5rem;
+            text-align: center;
+            border-radius: 0.75rem;
+            display: flex;
+            flex-direction: column;
+            height: 100%; /* Ensure all cards in a row have the same height */
+        }
+        .service-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin: 0.5rem;
+            width: 100px; /* Fixed width for alignment */
+            font-size: 0.875rem;
+        }
+        .service-icon svg {
+            margin-bottom: 0.5rem;
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-300">
 
     <!-- Header Section -->
-    <header class="bg-gray-800/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-700">
+     <header class="bg-gray-800/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-700">
         <div class="container mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2.69l.346.666L19.5 15.5H4.5l7.154-12.144A.5.5 0 0 1 12 2.69zM12 17.5v3.5"/>
-                    <path d="M12 11.5l-3.5 6h7l-3.5-6z"/>
+            <a href="index.html" class="text-gray-400 hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                 </svg>
             </a>
-            <h1 class="text-xl md:text-3xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">Amazon Web Services (AWS)</h1>
-            <div class="w-8"></div> <!-- Spacer -->
+            <h1 class="text-xl md:text-3xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-300">Amazon Web Services (AWS)</h1>
+            <div class="w-6"></div> <!-- Spacer to keep title centered -->
         </div>
     </header>
 
@@ -194,7 +214,6 @@
         <!-- Shared Responsibility Model Section -->
         <section id="shared-responsibility" class="fade-in-section mb-20">
             <h2 class="text-3xl font-bold text-center mb-12 text-white">Shared Responsibility Model</h2>
-
             <div class="max-w-4xl mx-auto bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 mb-12">
                 <h3 class="text-2xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-cyan-400 mb-4">The House Analogy</h3>
                 <ul class="list-disc list-inside space-y-3 text-gray-400">
@@ -202,9 +221,7 @@
                     <li>As the owner, it's your duty to use that lock for security. This is like the Customer being responsible for security&nbsp;<strong class="text-indigo-400">IN</strong>&nbsp;the cloud (customer data, client-side data encryption).</li>
                 </ul>
             </div>
-
             <div class="max-w-6xl mx-auto rounded-lg overflow-hidden shadow-2xl text-sm md:text-base">
-
                 <div class="flex flex-col md:flex-row">
                     <div class="w-full md:w-1/4 bg-indigo-700 text-white font-bold p-4 flex items-center justify-center text-center chevron-clip-mobile">Customer<br>Responsibility</div>
                     <div class="w-full md:w-2/4 bg-gray-800 text-gray-300">
@@ -213,7 +230,6 @@
                     </div>
                     <div class="w-full md:w-1/4 bg-gray-800 font-semibold p-4 flex items-center justify-center text-center border-l-4 border-indigo-700">Security&nbsp;<span class="font-bold text-indigo-400">IN</span>&nbsp;the cloud</div>
                 </div>
-
                 <div class="flex flex-col md:flex-row">
                     <div class="w-full md:w-1/4 bg-teal-700 text-white font-bold p-4 flex items-center justify-center text-center chevron-clip-mobile">Customer or AWS<br>Responsibility</div>
                     <div class="w-full md:w-2/4 bg-gray-800 text-gray-300">
@@ -224,7 +240,6 @@
                     </div>
                     <div class="w-full md:w-1/4 bg-gray-800 font-semibold p-4 flex items-center justify-center text-center border-l-4 border-teal-700">Varies by service</div>
                 </div>
-
                 <div class="flex flex-col md:flex-row">
                     <div class="w-full md:w-1/4 bg-amber-600 text-gray-900 font-bold p-4 flex items-center justify-center text-center chevron-clip-mobile">AWS<br>Responsibility</div>
                     <div class="w-full md:w-2/4 bg-gray-800 text-gray-300">
@@ -233,7 +248,95 @@
                     </div>
                     <div class="w-full md:w-1/4 bg-gray-800 font-semibold p-4 flex items-center justify-center text-center border-l-4 border-amber-600">Security&nbsp;<span class="font-bold text-amber-400">OF</span>&nbsp;the cloud</div>
                 </div>
+            </div>
+        </section>
 
+        <!-- AWS Services Diagram Section -->
+        <section id="aws-services-diagram" class="fade-in-section mb-20">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">AWS Services Overview</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+                <!-- Compute -->
+                <div class="service-category" style="border-color: #FF9900;">
+                    <h3 class="text-2xl font-bold mb-4" style="color: #FF9900;">Compute</h3>
+                    <div class="flex justify-center flex-wrap">
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#FF9900"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">EC2</text></svg><span>Amazon EC2</span></div>
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#FF9900"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">EB</text></svg><span>Elastic Beanstalk</span></div>
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#FF9900"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">λ</text></svg><span>AWS Lambda</span></div>
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#FF9900"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">AS</text></svg><span>Auto Scaling</span></div>
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#FF9900"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">ELB</text></svg><span>Elastic Load Balancer</span></div>
+                    </div>
+                </div>
+                <!-- Storage & Content Delivery -->
+                <div class="service-category" style="border-color: #D95140;">
+                    <h3 class="text-2xl font-bold mb-4" style="color: #D95140;">Storage & Content Delivery</h3>
+                    <div class="flex justify-center flex-wrap mt-auto">
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#D95140"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">EBS</text></svg><span>Amazon EBS</span></div>
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#D95140"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">EFS</text></svg><span>Amazon EFS</span></div>
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#D95140"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">S3</text></svg><span>Amazon S3</span></div>
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#D95140"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">G</text></svg><span>Amazon Glacier</span></div>
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#D95140"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">SB</text></svg><span>AWS Snowball</span></div>
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#D95140"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">SG</text></svg><span>Storage Gateway</span></div>
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#D95140"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">CF</text></svg><span>CloudFront</span></div>
+                    </div>
+                </div>
+                <!-- Database -->
+                <div class="service-category" style="border-color: #2E73B8;">
+                    <h3 class="text-2xl font-bold mb-4" style="color: #2E73B8;">Database</h3>
+                    <div class="flex justify-center flex-wrap mt-auto">
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#2E73B8"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">RDS</text></svg><span>RDS</span></div>
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#2E73B8"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">DB</text></svg><span>DynamoDB</span></div>
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#2E73B8"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">EC</text></svg><span>ElastiCache</span></div>
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#2E73B8"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">RS</text></svg><span>Redshift</span></div>
+                    </div>
+                </div>
+                <!-- Networking -->
+                <div class="service-category" style="border-color: #FF4F8B;">
+                    <h3 class="text-2xl font-bold mb-4" style="color: #FF4F8B;">Networking</h3>
+                    <div class="flex justify-center flex-wrap">
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#FF4F8B"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">VPC</text></svg><span>Amazon VPC</span></div>
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#FF4F8B"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">DC</text></svg><span>Direct Connect</span></div>
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#FF4F8B"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">R53</text></svg><span>Route 53</span></div>
+                    </div>
+                </div>
+                <!-- Management Tools -->
+                <div class="service-category" style="border-color: #5F4B8B;">
+                    <h3 class="text-2xl font-bold mb-4" style="color: #5F4B8B;">Management Tools</h3>
+                    <div class="flex justify-center flex-wrap mt-auto">
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#5F4B8B"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">CW</text></svg><span>CloudWatch</span></div>
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#5F4B8B"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="bold" font-family="Inter, sans-serif">CFN</text></svg><span>CloudFormation</span></div>
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#5F4B8B"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">CT</text></svg><span>CloudTrail</span></div>
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#5F4B8B"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">OW</text></svg><span>OpsWorks</span></div>
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#5F4B8B"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">TA</text></svg><span>Trusted Advisor</span></div>
+                    </div>
+                </div>
+                <!-- Security & Identity -->
+                <div class="service-category" style="border-color: #00A896;">
+                    <h3 class="text-2xl font-bold mb-4" style="color: #00A896;">Security & Identity</h3>
+                    <div class="flex justify-center flex-wrap">
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#00A896"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">IAM</text></svg><span>IAM</span></div>
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#00A896"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">KMS</text></svg><span>KMS</span></div>
+                    </div>
+                </div>
+                <!-- Application Services -->
+                <div class="service-category md:col-span-2" style="border-color: #E8A87C;">
+                    <h3 class="text-2xl font-bold mb-4" style="color: #E8A87C;">Application Services</h3>
+                    <div class="flex justify-center flex-wrap mt-auto">
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#E8A87C"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">SES</text></svg><span>Amazon SES</span></div>
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#E8A87C"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">SNS</text></svg><span>Amazon SNS</span></div>
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#E8A87C"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">SQS</text></svg><span>Amazon SQS</span></div>
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#E8A87C"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">SWF</text></svg><span>Amazon SWF</span></div>
+                    </div>
+                </div>
+                <!-- Developer Tools -->
+                <div class="service-category md:col-span-2" style="border-color: #8D6E63;">
+                    <h3 class="text-2xl font-bold mb-4" style="color: #8D6E63;">Developer Tools</h3>
+                    <div class="flex justify-center flex-wrap mt-auto">
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#8D6E63"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">CP</text></svg><span>CodePipeline</span></div>
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#8D6E63"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">CD</text></svg><span>CodeDeploy</span></div>
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#8D6E63"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">CB</text></svg><span>CodeBuild</span></div>
+                        <div class="service-icon"><svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" ry="8" fill="#8D6E63"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#FFFFFF" font-size="16" font-weight="bold" font-family="Inter, sans-serif">CC</text></svg><span>CodeCommit</span></div>
+                    </div>
+                </div>
             </div>
         </section>
 
