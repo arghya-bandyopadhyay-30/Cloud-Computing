@@ -502,6 +502,33 @@ s3.create_bucket(Bucket='my-test-bucket')</code></pre>
                     </div>
                  </div>
             </div>
+
+            <!-- Shared Responsibility Model for EC2 -->
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 mt-12">
+                <h3 class="text-2xl font-bold text-center mb-6 text-white">Shared Responsibility Model for EC2</h3>
+                <div class="max-w-4xl mx-auto flex flex-col md:flex-row overflow-hidden rounded-lg">
+                    <div class="w-full md:w-1/3 bg-teal-800 text-white p-6 flex flex-col justify-center items-center text-center">
+                        <h3 class="text-2xl font-bold">Customer Responsibility</h3>
+                    </div>
+                    <div class="w-full md:w-2/3 text-left">
+                        <div class="bg-teal-900/50 p-3 border-b border-teal-700">Customer Data</div>
+                        <div class="bg-teal-900/50 p-3 border-b border-teal-700">Client-side Data Encryption</div>
+                        <div class="bg-teal-900/50 p-3 border-b border-teal-700">Server-side Encryption</div>
+                        <div class="bg-teal-900/50 p-3 border-b border-teal-700">Network Traffic Protection</div>
+                        <div class="bg-teal-900/50 p-3 border-b border-teal-700">Platform and Application Management</div>
+                        <div class="bg-teal-900/50 p-3">OS, Network, Firewall Configuration</div>
+                    </div>
+                </div>
+                 <div class="max-w-4xl mx-auto flex flex-col md:flex-row overflow-hidden rounded-lg mt-1">
+                    <div class="w-full md:w-1/3 bg-yellow-600 text-white p-6 flex flex-col justify-center items-center text-center">
+                        <h3 class="text-2xl font-bold">AWS Responsibility</h3>
+                    </div>
+                    <div class="w-full md:w-2/3 text-left">
+                        <div class="bg-yellow-800/30 p-3 border-b border-yellow-700">Software for Compute, Storage, Database, and Networking</div>
+                        <div class="bg-yellow-800/30 p-3">Hardware, AWS Global Infrastructure</div>
+                    </div>
+                </div>
+            </div>
         </section>
 
     </main>
